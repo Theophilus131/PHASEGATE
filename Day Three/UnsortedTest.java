@@ -12,9 +12,8 @@ import org.junit.jupiter.api.Test;
 	Unsorted sorted = new Unsorted();
 
 	int [] actual = sorted.sortingArray(input);
-	int [] check = sorted.sortingArray(actual);
-
-	assertArrayEquals(expected, check);
+	
+	assertArrayEquals(expected, actual);
 }
 
 
@@ -27,16 +26,9 @@ import org.junit.jupiter.api.Test;
 	Unsorted sorted = new Unsorted();
 
 	int [] actual = sorted.sortingArray(input);
-	int [] check = sorted.sortingArray(actual);
-
+	
 	assertArrayEquals(expected, check);
 }
-
-
-
-
-
-
 
 
 	}

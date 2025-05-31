@@ -4,17 +4,22 @@ import org.junit.jupiter.api.Test;
 	public class FactorTest{
 
  @Test
-   public void testsortedElementIsCorrect(){
+   public void testfactorElementIsCorrect(){
+	int [] num = {7};
+	int [] input = Factor.factorOf(num);
+	int [] expected = {1, 7} ;
+	assertArrayEquals(input, expected);
 
- 	int []  input = {7};
-	int [] expected = {1, 7};
-  	
-	Factor number = new Factor();
+}
 
-	int [] actual =  number.factorOf(input);
-	int [] check = number.factorOf(actual);
+@Test
+   public void testEmptyArrayElementIsCorrect(){
+	int [] num = {};
+	int [] input = Factor.factorOf(num);
+	int [] expected = {} ;
+	assertArrayEquals(input, expected);
 
-	assertArrayEquals(expected, check);
+
 }
 
 }

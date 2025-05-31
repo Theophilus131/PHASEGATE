@@ -1,33 +1,27 @@
-
 import java.util.Arrays;
 
-public class LargestIndex{
+public class LargestIndex {
 
-public static int [] largestArray(int [] integer){
+    public static int[] largestArray(int [] integer) {
+        int largest = integer[0];
+        int indexOfLargest = 0;
 
+        for (int index = 1; index < integer.length; index++) {
+            if (integer[index] > largest) {
+                largest = integer[index];
+                indexOfLargest = index;
+            }
+        }
 
-int largest = integer [0];
+        return new int[] { indexOfLargest };
+    }
 
-int count = 0;
+    public static void main(String[] args) {
+        int[] input = {1, 5, 3, 5, 5, 5};
+       
+	 // int[] input = {1, 2, 8, 20, 5};
 
-	for(int index = 0; index < integer.length; index++){
-
-	if(integer[index] > largest && integer[index] != largest ){
-		largest = integer[index];
-		count = index;
-		}
+        System.out.println("The smallest index of the largest number is: " + 
+            Arrays.toString(LargestIndex.largestArray(input)));
+    }
 }
-	return new int [] {count};
-
-
-}
-
-	public static void main(String [] args){
-	
-	int [] input = {1, 2, 3, 4, 5, 5};
-
-	//int [] input = {1, 2, 8, 20, 5}
-        System.out.println("The smallest index of the largest number is: " + Arrays.toString( LargestIndex.largestArray(input)));
-
-}
-	}
