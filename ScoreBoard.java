@@ -18,7 +18,7 @@ public static int [] studentScoreBoard(int [] score){
 
  	public static void main(String [] args){
 
-	int [][] input = {3, 3, 4}{9, 1, 3};
+	int [][] input = { {3, 3, 4}, {9, 1, 3} };
 
 	System.out.println(System.out.print(Arrays.toString(studentScoreBoard(input))));
 }

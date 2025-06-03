@@ -14,7 +14,7 @@ double largest = integer [0];
 
 	for(int j =0; j < integer[i].length; j++){
 	
-	if(integer[i] > largest )
+	if(integer[i][j] > largest )
 		largest = integer[i];
 	
 		}

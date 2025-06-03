@@ -18,9 +18,10 @@ for(int i = 0; i < word.length(); i++){
 
 
 	}
-/*
+
 public static void main(String [] args){
-String word = "hello world"
+String word = "hello world";
 
 System.out.println(" occurance  " +Word.occuranceWord(word);
-*/
+
+}

@@ -1,32 +1,30 @@
 import java.util.Arrays;
 
-public class TwoDClockwise{
+public class TwoDClockwise {
 
-public static int [] rotatingArray(int [][] number){
+    public static int[][] rotateClockwise(int[][] originalMatrix) {
+        
+		int totalRows = originalMatrix.length; 
 
+        	int[][] rotatedMatrix = new int[totalRows][totalRows];
 
-int [][] number = { {1, 2, 3}, {4,5,6}, {7,8,9} };
+                for (int row = 0; row < totalRows; row++) {
 
-for(int row = 0; row < number.length; row++){
+            	for (int col = 0; col < totalRows; col++) {
 
-for(int col = 0; col < number[row].length; col++){
-		
-	return new int [] number[col][row]; 
-}
+             rotatedMatrix[col][totalRows - 1 - row] = originalMatrix[row][col];
+            }
+        }
 
-}
+        	return rotatedMatrix; 
+    }
 
-}
+        public static void main(String[] args) {
+       
+        int[][] inputMatrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
-public static void main(String [] args){
+    	int[][] resultMatrix = rotateClockwise(inputMatrix);
 
-int [][] input = { {1, 2, 3}, {4,5,6}, {7,8,9} };
-
-System.out.println(Arrays.deepToString(TwoDClockwise.rotatingArray(input)));
-
-
-
-	
-	}
-
+        System.out.println(Arrays.deepToString(resultMatrix));
+    }
 }
